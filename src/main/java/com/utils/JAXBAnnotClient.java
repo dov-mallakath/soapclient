@@ -1,7 +1,7 @@
 package com.utils;
 
-import com.product.client.ProductInterface;
 
+import com.product.client.*;
 import javax.xml.ws.WebServiceRef;
 
 public class JAXBAnnotClient {

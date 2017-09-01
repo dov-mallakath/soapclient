@@ -83,7 +83,7 @@
                                 <sei/>
                                 <wsdlUrls>
                                     <wsdlUrl>
-                                        http://www.webservicex.net/geoipservice.asmx?wsdl
+                                        http://www.webservicex.net/ConvertSpeed.asmx?WSDL
                                     </wsdlUrl>
                                 </wsdlUrls>
                             </configuration>
