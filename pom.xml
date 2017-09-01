@@ -10,10 +10,12 @@
 
     <properties>
         <testng.version>6.11</testng.version>
-        <log4j.version>2.8.2</log4j.version>
+        <log4j.version>2.5</log4j.version>
         <dom4j.version>1.6.1</dom4j.version>
-        <slf4j-log4j2.version>2.8.2</slf4j-log4j2.version>
+        <slf4j-log4j2.version>2.5</slf4j-log4j2.version>
         <jcl-over-slf4j.version>1.7.18</jcl-over-slf4j.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -60,28 +62,35 @@
         <!--</dependency>-->
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jvnet.jax-ws-commons</groupId>
-                <artifactId>jaxws-maven-plugin</artifactId>
-                <version>2.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>wsimport</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <sei/>
-                    <wsdlUrls>
-                        <wsdlUrl>
-                            http://www.webservicex.net/geoipservice.asmx?WSDL
-                        </wsdlUrl>
-                    </wsdlUrls>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <profiles>
+            <profile>
+                <id>Generate</id>
+
+                <build>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.jvnet.jax-ws-commons</groupId>
+                            <artifactId>jaxws-maven-plugin</artifactId>
+                            <version>2.1</version>
+                            <executions>
+                                <execution>
+                                    <goals>
+                                        <goal>wsimport</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                            <configuration>
+                                <sei/>
+                                <wsdlUrls>
+                                    <wsdlUrl>
+                                        http://www.webservicex.net/geoipservice.asmx?wsdl
+                                    </wsdlUrl>
+                                </wsdlUrls>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </build>
+            </profile>
+    </profiles>
+
 </project>
