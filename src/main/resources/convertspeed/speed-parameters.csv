@@ -64,67 +64,67 @@ leaguesPerday,Mach,0,0
 Mach,Mach,0,0
 
 
-centimetersPersecond,centimetersPersecond,100,0
-centimetersPersecond,metersPersecond,100,0
+centimetersPersecond,centimetersPersecond,100,100
+centimetersPersecond,metersPersecond,100,1
 centimetersPersecond,feetPersecond,100,3.2808398950131235
-centimetersPersecond,feetPerminute,100,0
-centimetersPersecond,milesPerhour,100,0
-centimetersPersecond,kilometersPerhour,100,0
-centimetersPersecond,furlongsPermin,100,0
-centimetersPersecond,knots,100,0
-centimetersPersecond,leaguesPerday,100,0
-centimetersPersecond,Mach,100,0
+centimetersPersecond,feetPerminute,100,196.8503937007874
+centimetersPersecond,milesPerhour,100,2.2369362920544025
+centimetersPersecond,kilometersPerhour,100,3.6
+centimetersPersecond,furlongsPermin,100,0.2982581722739203
+centimetersPersecond,knots,100,1.9438461717893492
+centimetersPersecond,leaguesPerday,100,17.89549033643522
+centimetersPersecond,Mach,100,0.0030154814819282195
 
-metersPersecond,metersPersecond,100,0
+metersPersecond,metersPersecond,100,100
 metersPersecond,feetPersecond,100,328.0839895013123
-metersPersecond,feetPerminute,100,0
-metersPersecond,milesPerhour,100,0
-metersPersecond,kilometersPerhour,100,0
-metersPersecond,furlongsPermin,100,0
-metersPersecond,knots,100,100
-metersPersecond,leaguesPerday,100,100
-metersPersecond,Mach,100,100
+metersPersecond,feetPerminute,100,19685.03937007874
+metersPersecond,milesPerhour,100,223.69362920544026
+metersPersecond,kilometersPerhour,100,360
+metersPersecond,furlongsPermin,100,29.825817227392033
+metersPersecond,knots,100,194.38461717893492
+metersPersecond,leaguesPerday,100,1789.549033643522
+metersPersecond,Mach,100,0.30154814819282194
 
 feetPersecond,feetPersecond,100,100
-feetPersecond,feetPerminute,100,100
-feetPersecond,milesPerhour,100,100
-feetPersecond,kilometersPerhour,100,100
-feetPersecond,furlongsPermin,100,100
-feetPersecond,knots,100,100
-feetPersecond,leaguesPerday,100,0
-feetPersecond,Mach,100,0
+feetPersecond,feetPerminute,100,6000
+feetPersecond,milesPerhour,100,68.18181818181819
+feetPersecond,kilometersPerhour,100,109.72853161278995
+feetPersecond,furlongsPermin,100,0
+feetPersecond,knots,100,59.24837511331251
+feetPersecond,leaguesPerday,100,545.4644629902363
+feetPersecond,Mach,100,0.09191187537183523
 
-feetPerminute,feetPerminute,100,0
+feetPerminute,feetPerminute,100,100
 feetPerminute,milesPerhour,100,0
-feetPerminute,kilometersPerhour,100,0
+feetPerminute,kilometersPerhour,100,1.8287998299947676
 feetPerminute,furlongsPermin,100,0
-feetPerminute,knots,100,0
+feetPerminute,knots,100,0.9874738936589365
 feetPerminute,leaguesPerday,100,0
-feetPerminute,Mach,100,0
+feetPerminute,Mach,100,0.00153186459281584
 
-milesPerhour,milesPerhour,100,0
-milesPerhour,kilometersPerhour,100,0
-milesPerhour,furlongsPermin,100,0
-milesPerhour,knots,100,0
-milesPerhour,leaguesPerday,100,0
-milesPerhour,Mach,100,0
+milesPerhour,milesPerhour,100,100
+milesPerhour,kilometersPerhour,100,160.93470878864446
+milesPerhour,furlongsPermin,100,13.333333333333334
+milesPerhour,knots,100,86.8975825092546
+milesPerhour,leaguesPerday,100,800
+milesPerhour,Mach,100,0.13480408363088975
 
-kilometersPerhour,kilometersPerhour,100,0
-kilometersPerhour,furlongsPermin,100,0
-kilometersPerhour,knots,100,0
-kilometersPerhour,leaguesPerday,100,0
+kilometersPerhour,kilometersPerhour,100,100
+kilometersPerhour,furlongsPermin,100,8.284949229831119
+kilometersPerhour,knots,100,53.99568034557235
+kilometersPerhour,leaguesPerday,100,497.0920117313715
 kilometersPerhour,Mach,100,0.0837633751996364
 
-furlongsPermin,furlongsPermin,100,0
-furlongsPermin,knots,100,0
-furlongsPermin,leaguesPerday,100,0
-furlongsPermin,Mach,100,0
+furlongsPermin,furlongsPermin,100,100
+furlongsPermin,knots,100,651.7205422314912
+furlongsPermin,leaguesPerday,100,6000
+furlongsPermin,Mach,100,1.0110306476753321
 
-knots,knots,100,0
-knots,leaguesPerday,100,0
-knots,Mach,100,0
+knots,knots,100,100
+knots,leaguesPerday,100,920.6407659731174
+knots,Mach,100,0.15512963438923663
 
-leaguesPerday,leaguesPerday,100,0
-leaguesPerday,Mach,100,0
+leaguesPerday,leaguesPerday,100,100
+leaguesPerday,Mach,100,0.01685051051064916
 
 Mach,Mach,100,100
