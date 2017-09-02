@@ -8,9 +8,9 @@ public class JAXBAnnotClient {
 
     @WebServiceRef(wsdlLocation =
             "http://localhost:9999/ws/product?wsdl")
-   private static ProductInterface productInterface;
+    private static ProductInterface productInterface;
 
-  public static void main(String[] args) {
-       System.out.println(productInterface.getProduct());
+    public static void main(String[] args) {
+        System.out.println(productInterface.getProduct());
     }
 }
