@@ -63,7 +63,6 @@ leaguesPerday,Mach,0,0
 
 Mach,Mach,0,0
 
-
 centimetersPersecond,centimetersPersecond,100,100
 centimetersPersecond,metersPersecond,100,1
 centimetersPersecond,feetPersecond,100,3.2808398950131235
@@ -75,6 +74,7 @@ centimetersPersecond,knots,100,1.9438461717893492
 centimetersPersecond,leaguesPerday,100,17.89549033643522
 centimetersPersecond,Mach,100,0.0030154814819282195
 
+metersPersecond,centimetersPersecond,100,10000
 metersPersecond,metersPersecond,100,100
 metersPersecond,feetPersecond,100,328.0839895013123
 metersPersecond,feetPerminute,100,19685.03937007874
@@ -85,23 +85,32 @@ metersPersecond,knots,100,194.38461717893492
 metersPersecond,leaguesPerday,100,1789.549033643522
 metersPersecond,Mach,100,0.30154814819282194
 
+feetPersecond,centimetersPersecond,100,3048
+feetPersecond,metersPersecond,100,30.48
 feetPersecond,feetPersecond,100,100
 feetPersecond,feetPerminute,100,6000
 feetPersecond,milesPerhour,100,68.18181818181819
 feetPersecond,kilometersPerhour,100,109.72853161278995
-feetPersecond,furlongsPermin,100,0
+feetPersecond,furlongsPermin,100,9.09090909091
 feetPersecond,knots,100,59.24837511331251
 feetPersecond,leaguesPerday,100,545.4644629902363
 feetPersecond,Mach,100,0.09191187537183523
 
+feetPerminute,centimetersPersecond,100,50.8
+feetPerminute,metersPersecond,100,0.508
+feetPerminute,feetPersecond,100,1.666666666667
 feetPerminute,feetPerminute,100,100
-feetPerminute,milesPerhour,100,0
+feetPerminute,milesPerhour,100,1.136363636364
 feetPerminute,kilometersPerhour,100,1.8287998299947676
-feetPerminute,furlongsPermin,100,0
+feetPerminute,furlongsPermin,100,0.15151515151
 feetPerminute,knots,100,0.9874738936589365
-feetPerminute,leaguesPerday,100,0
+feetPerminute,leaguesPerday,100,7.89978401182
 feetPerminute,Mach,100,0.00153186459281584
 
+milesPerhour,centimetersPersecond,100,4470.4
+milesPerhour,metersPersecond,100,44.704
+milesPerhour,feetPersecond,100,146.6666666667
+milesPerhour,feetPerminute,100,8800
 milesPerhour,milesPerhour,100,100
 milesPerhour,kilometersPerhour,100,160.93470878864446
 milesPerhour,furlongsPermin,100,13.333333333333334
@@ -109,22 +118,57 @@ milesPerhour,knots,100,86.8975825092546
 milesPerhour,leaguesPerday,100,800
 milesPerhour,Mach,100,0.13480408363088975
 
+kilometersPerhour,centimetersPersecond,100,2777.777777778
+kilometersPerhour,metersPersecond,100,27.77777777778
+kilometersPerhour,feetPersecond,100,91.134
+kilometersPerhour,feetPerminute,100,5468.067
+kilometersPerhour,milesPerhour,100,62.137
 kilometersPerhour,kilometersPerhour,100,100
 kilometersPerhour,furlongsPermin,100,8.284949229831119
 kilometersPerhour,knots,100,53.99568034557235
 kilometersPerhour,leaguesPerday,100,497.0920117313715
 kilometersPerhour,Mach,100,0.0837633751996364
 
+furlongsPermin,centimetersPersecond,100,33528.0
+furlongsPermin,metersPersecond,100,335.28
+furlongsPermin,feetPersecond,100,1100.0
+furlongsPermin,feetPerminute,100,66000
+furlongsPermin,milesPerhour,100,750
+furlongsPermin,kilometersPerhour,100,1207.008
 furlongsPermin,furlongsPermin,100,100
 furlongsPermin,knots,100,651.7205422314912
 furlongsPermin,leaguesPerday,100,6000
 furlongsPermin,Mach,100,1.0110306476753321
 
+knots,centimetersPersecond,100,5144.4400000000005
+knots,metersPersecond,100,51.4444
+knots,feetPersecond,100,168.781
+knots,feetPerminute,100,10126.85
+knots,milesPerhour,100,115.07799999999999
+knots,kilometersPerhour,100,185.20000000000002
+knots,furlongsPermin,100,15.344
 knots,knots,100,100
 knots,leaguesPerday,100,920.6407659731174
 knots,Mach,100,0.15512963438923663
 
+leaguesPerday,centimetersPersecond,100,558.8
+leaguesPerday,metersPersecond,100,5.588
+leaguesPerday,feetPersecond,100,18.333
+leaguesPerday,feetPerminute,100,1100
+leaguesPerday,milesPerhour,100,12.5
+leaguesPerday,kilometersPerhour,100,20.116999999999997
+leaguesPerday,furlongsPermin,100,1.91796574803
+leaguesPerday,knots,100,10.862
 leaguesPerday,leaguesPerday,100,100
 leaguesPerday,Mach,100,0.01685051051064916
 
+Mach,centimetersPersecond,100,3316219.9999999995
+Mach,metersPersecond,100,33162.200000000004
+Mach,feetPersecond,100,108799.86899999999
+Mach,feetPerminute,100,6527992.126
+Mach,milesPerhour,100,74181.72899999999
+Mach,kilometersPerhour,100,119383.919
+Mach,furlongsPermin,100,9890.896999999999
+Mach,knots,100,64462.216
+Mach,leaguesPerday,100,593453.8300000001
 Mach,Mach,100,100
