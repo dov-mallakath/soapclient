@@ -95,7 +95,7 @@ public class ConvertSpeedsClientTest {
     public void getSpeedsTest(HashMap data) {
         Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.valueOf(data.get("speed").toString()),SpeedUnit.fromValue(data.get("from").toString()),SpeedUnit.fromValue(data.get("to").toString()));
         testDataLog = data.get("from") + "," + data.get("to") + "," + data.get("speed") + "," + data.get("expectedResult") + "," + convertSpeed;
-        assertEquals(Double.valueOf(data.get("expectedResult").toString()),convertSpeed);
+        assertEquals(Double.valueOf(data.get("expectedResult").toString()), convertSpeed, 1e-15);
     }
 
     @AfterMethod
