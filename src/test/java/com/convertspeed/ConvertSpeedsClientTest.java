@@ -17,7 +17,7 @@ import static org.testng.AssertJUnit.assertEquals;
  * @author Denys Ovcharuk (DOV) / WorldTicket A/S
  * @since 2017-09-02
  */
-public class ConvertSpeedsTest {
+public class ConvertSpeedsClientTest {
 
     private ConvertSpeedsClient convertSpeedsClient = new ConvertSpeedsClient();
     private ConvertSpeedsSoap convertSpeedsSoap = convertSpeedsClient.client;
@@ -54,8 +54,45 @@ public class ConvertSpeedsTest {
         return objects;
     }
 
+//    Test input
+//1. 0, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND - Expected result  Assert.assertEquals(0, actualResult, 1e-15);
+//2. Double.MAX_VALUE, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.KILOMETERS_PERHOUR - Expected result - Double.MAX_VALUE
+//3. Double.MAX_VALUE, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND - Expected result - Double.isInfinite(actualResult)
+//            4. Double.NaN, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND - Expected result - Double.isNaN(actualResult)
+//            5. Double.POSITIVE_INFINITY, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND - Expected result -Double.isInfinite(actualResult)
+
+    @Test
+    public void getZeroSpeedTest() {
+        Double convertSpeed = convertSpeedsSoap.convertSpeed(0, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND);
+        assertEquals(0, convertSpeed, 1e-15);
+    }
+
+    @Test
+    public void getMaxSpeedTest() {
+        Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.MAX_VALUE, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.KILOMETERS_PERHOUR);
+        assertEquals(Double.MAX_VALUE, convertSpeed);
+    }
+
+    @Test
+    public void getInfiniteSpeedTest() {
+        Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.MAX_VALUE, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND);
+        assertEquals(Double.isInfinite(convertSpeed), true);
+    }
+
+    @Test
+    public void getNaNSpeedTest() {
+        Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.NaN, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND);
+        assertEquals(Double.isNaN(convertSpeed), true);
+    }
+
+    @Test
+    public void getPositiveInfinitySpeedTest() {
+        Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.POSITIVE_INFINITY, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND);
+        assertEquals(Double.isInfinite(convertSpeed), true);
+    }
+
     @Test(dataProvider = "Calculations")
-    public void getSpeed(HashMap data) {
+    public void getSpeedsTest(HashMap data) {
         Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.valueOf(data.get("speed").toString()),SpeedUnit.fromValue(data.get("from").toString()),SpeedUnit.fromValue(data.get("to").toString()));
         testDataLog = data.get("from") + "," + data.get("to") + "," + data.get("speed") + "," + data.get("expectedResult") + "," + convertSpeed;
         assertEquals(Double.valueOf(data.get("expectedResult").toString()),convertSpeed);
