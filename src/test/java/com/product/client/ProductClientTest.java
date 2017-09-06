@@ -18,4 +18,10 @@ public class ProductClientTest {
         assertEquals(product.getProductName(),"Sony");
     }
 
+    @Test
+    public void productValidationTest() {
+        Product product = productClient.getProduct("Xperia");
+        assertEquals(product.getProductName(), "Sony");
+    }
+
 }

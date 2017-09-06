@@ -31,4 +31,8 @@ public interface ProductInterface {
     @WebResult(name = "Product", partName = "Product")
     public Product getProduct();
 
+    @WebMethod
+    @WebResult(name = "Product", partName = "Product")
+    public Product getProduct(String name);
+
 }

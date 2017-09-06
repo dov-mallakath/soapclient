@@ -43,4 +43,14 @@ public interface ConvertSpeedsSoap {
             @WebParam(name = "ToUnit", targetNamespace = "http://www.webserviceX.NET/")
                     SpeedUnit toUnit);
 
+    //Overloaded method without 'Speed' value
+    @WebMethod(operationName = "ConvertSpeed", action = "http://www.webserviceX.NET/ConvertSpeed")
+    @WebResult(name = "ConvertSpeedResult", targetNamespace = "http://www.webserviceX.NET/")
+    @RequestWrapper(localName = "ConvertSpeed", targetNamespace = "http://www.webserviceX.NET/", className = "net.webservicex.ConvertSpeed")
+    @ResponseWrapper(localName = "ConvertSpeedResponse", targetNamespace = "http://www.webserviceX.NET/", className = "net.webservicex.ConvertSpeedResponse")
+    public double convertSpeed(
+            @WebParam(name = "FromUnit", targetNamespace = "http://www.webserviceX.NET/")
+                    SpeedUnit fromUnit,
+            @WebParam(name = "ToUnit", targetNamespace = "http://www.webserviceX.NET/")
+                    SpeedUnit toUnit);
 }

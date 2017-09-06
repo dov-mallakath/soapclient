@@ -7,10 +7,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import javax.xml.ws.soap.SOAPFaultException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
 import static org.testng.AssertJUnit.assertEquals;
 
 /**
@@ -89,6 +91,22 @@ public class ConvertSpeedsClientTest {
     public void getPositiveInfinitySpeedTest() {
         Double convertSpeed = convertSpeedsSoap.convertSpeed(Double.POSITIVE_INFINITY, SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND);
         assertEquals(Double.isInfinite(convertSpeed), true);
+    }
+
+    @Test
+    public void nonExistingNameSpeedTest() {
+        Double convertSpeed = convertSpeedsSoap.convertSpeed(SpeedUnit.KILOMETERS_PERHOUR, SpeedUnit.CENTIMETERS_PERSECOND);
+        assertEquals(convertSpeed, 0.0);
+    }
+
+    @Test(expectedExceptions = SOAPFaultException.class)
+    public void nonExistingFromSpeedTest() {
+        try {
+            convertSpeedsSoap.convertSpeed(100, SpeedUnit.TEST, SpeedUnit.CENTIMETERS_PERSECOND);
+        } catch (SOAPFaultException e) {
+            assertTrue(e.getMessage().contains("'Test' is not a valid value for SpeedUnit"));
+            throw e;
+        }
     }
 
     @Test(dataProvider = "Calculations")
